@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useContext, createContext, useEffect } from 'react';
+import { useState, useContext, createContext, useEffect, useRef } from 'react';
 import axios from 'axios';
 import MailBox from './MailBox.jsx';
 import Events from './Events.jsx';
@@ -28,9 +28,6 @@ const BulletinBoard = () => {
     })
   }
 
-
-
-
   const getPosts = () => {
     axios.get('http://localhost:3000/posts')
       .then(results => {
@@ -39,6 +36,31 @@ const BulletinBoard = () => {
       .catch(error => {
         console.log(error)
       })
+  }
+
+  const deleteMail = (id) => {
+    axios.delete(`http://localhost:3000/${id}`)
+      .then(result => {
+        getMail();
+      })
+      .catch(error => {
+        console.log(error)
+      })
+  }
+
+
+
+  const postReply = (id, text) => {
+    axios.post('http://localhost:3000/postReply', {
+      id: _id,
+      text: text
+    })
+    .then(results => {
+      getPosts()
+    })
+    .catch(error => {
+      console.log(error)
+    })
   }
 
 
@@ -54,7 +76,7 @@ const BulletinBoard = () => {
 
   return (
 
-    <BBContext.Provider value={{posts, getPosts, mail, setMail}}>
+    <BBContext.Provider value={{posts, getPosts, mail, setMail, deleteMail, postReply}}>
         <div className='grid-item-BB' >
           <div className='sectionHeaders visibleContainer'>
             <h2 style={{paddingTop: '40px'}}>BULLETIN BOARD</h2>

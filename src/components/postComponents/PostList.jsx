@@ -6,7 +6,7 @@ import { BBContext } from '../BulletinBoard.jsx';
 import Post from './Post.jsx';
 
 let temp = [{createdAt: "2022-05-03T23:58:00.484Z",
-responses: [],
+responses: ["hey sounds great!", "i'll be there!"],
 room: 355,
 text: "Party over here",
 type: "post",
@@ -81,7 +81,6 @@ const PostList = () => {
 
 
   let list = (posts) => {
-    console.log(posts)
     return posts.map((post, idx) => {
       return <Post data={post} key={idx}/>
     });

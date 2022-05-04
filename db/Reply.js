@@ -3,11 +3,9 @@ const db = require('./index.js');
 mongoose.Promise = global.Promise;
 
 const userSchema = new mongoose.Schema({
-  type: String,
+  postID: Number,
   room: Number,
-  text: String,
-  urgency: String,
-  responses: [String]
+  text: String
 },
   {
     timestamps: true

@@ -5,13 +5,18 @@ import { BBContext } from './BulletinBoard.jsx';
 
 const Mail = (props) => {
 
-  const { posts, getPosts } = useContext(BBContext);
-  const { type, pickUp, note, room } = props.data;
+  const { deleteMail } = useContext(BBContext);
+  const { type, pickUp, note, room, _id } = props.data;
 
   let colors = {
     High: 'pink',
     Medium: 'lightyellow',
     Low: 'lightblue',
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    deleteMail(_id)
   }
 
   return (
@@ -20,6 +25,8 @@ const Mail = (props) => {
       <div style={{color: 'black'}}>{room}</div>
       <div>{`${type} ${pickUp}`}</div>
       <div>{note}</div>
+
+      <div className='reply' onClick={handleSubmit}>Got it!</div>
     </div>
 
   )

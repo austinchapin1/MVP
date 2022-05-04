@@ -5,6 +5,7 @@ const PORT = 3000;
 
 const Mail = require('../db/Mail.js');
 const Post = require('../db/Post.js');
+const Reply = require('../db/Reply.js')
 
 app.use(express.json());
 app.use(express.static(__dirname + '/../public'));
@@ -62,6 +63,11 @@ app.post('/mail', (req, res) => {
     .catch(error => {
       res.send(error)
     })
+})
+
+
+app.post('/postReply'. (req, res) => {
+  console.log(req.body)
 })
 
 
