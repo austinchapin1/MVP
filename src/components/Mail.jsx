@@ -1,12 +1,12 @@
 import React from 'react';
 import { useState, useContext, useEffect } from 'react';
 import axios from 'axios';
-import { BBContext } from '../BulletinBoard.jsx';
+import { BBContext } from './BulletinBoard.jsx';
 
-const Post = (props) => {
+const Mail = (props) => {
 
   const { posts, getPosts } = useContext(BBContext);
-  const { text, urgency, room } = props.data;
+  const { type, pickUp, note, room } = props.data;
 
   let colors = {
     High: 'pink',
@@ -16,15 +16,14 @@ const Post = (props) => {
 
   return (
 
-    <div className='col' style={{backgroundColor: colors[urgency]}}>
+    <div className='mail'>
       <div style={{color: 'black'}}>{room}</div>
-      <div>{text}</div>
-
-      <div className='reply' >Replies</div>
+      <div>{`${type} ${pickUp}`}</div>
+      <div>{note}</div>
     </div>
 
   )
 }
 
 
-export default Post;
+export default Mail;

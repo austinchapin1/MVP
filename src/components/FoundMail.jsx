@@ -76,7 +76,7 @@ const FoundMail = () => {
   return (
     <div>
       <div className='sectionHeaders'>
-        <h2 className='modalBtn' onClick={toggleModal}>Found Mail?</h2>
+        <h3 className='modalBtn' onClick={toggleModal}>Found Someones Mail?</h3>
       </div>
 
       <div onClick={toggleModal}>{mailOpen ? <ModalBackGround /> : null}</div>

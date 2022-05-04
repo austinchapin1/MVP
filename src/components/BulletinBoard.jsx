@@ -34,7 +34,6 @@ const BulletinBoard = () => {
   const getPosts = () => {
     axios.get('http://localhost:3000/posts')
       .then(results => {
-        console.log(posts)
         setPosts(results.data)
       })
       .catch(error => {
@@ -55,10 +54,10 @@ const BulletinBoard = () => {
 
   return (
 
-    <BBContext.Provider value={{posts, getPosts}}>
+    <BBContext.Provider value={{posts, getPosts, mail, setMail}}>
         <div className='grid-item-BB' >
           <div className='sectionHeaders visibleContainer'>
-            <h2>BULLETIN BOARD</h2>
+            <h2 style={{paddingTop: '40px'}}>BULLETIN BOARD</h2>
             <PostList />
           </div>
         </div>
@@ -68,7 +67,6 @@ const BulletinBoard = () => {
         </div>
         <MailBox />
         <Events />
-        {/* <DogeDay /> */}
 
     </BBContext.Provider>
   )

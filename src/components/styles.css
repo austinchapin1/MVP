@@ -65,7 +65,7 @@ h1 {
   /* text-shadow: 2px 5px lightgrey; */
   text-align: center;
   margin: 3em 0 2em 0;
-  padding-top: 38px;
+  /* padding-top: 38px; */
 }
 
 img {
@@ -89,6 +89,8 @@ img {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   scale: 1;
   transition: all .28s ease;
+  gap: 6vh;
+  display: flex;
 }
 
 .col:hover {
@@ -98,9 +100,36 @@ img {
   cursor: pointer;
 }
 
+
+.mail {
+  display: flex;
+  flex-direction:column;
+  background-color: pink;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 16px;
+  min-height: 50px;
+  font-size: 3vh;
+  border: solid 1px black;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  scale: 1;
+  transition: all .28s ease;
+}
+
+.mail:hover {
+  margin-left: 10px;
+  max-width: calc(90vh);
+  transform: scale(1.15);
+  cursor: pointer;
+}
+
+
+
+
+
 .navContainer {
   font-family: 'Monoton', cursive;
-  /* text-shadow: 2px 8px lightgray; */
+
   color: 	#f8f8ff;
   font-size: 2vw;
   margin: 5em;
@@ -109,7 +138,6 @@ img {
   justify-content:baseline;
   gap: 5px;
   margin: 0px 10px;
-  /* max-width: 80%; */
   padding: 15px;
   border-radius: 20px;
   background: dimgray;
@@ -126,13 +154,14 @@ img {
 }
 
 .modalBtn {
+  color: grey;
   cursor: pointer;
   transition: color .3s ease;
 }
 
 .modalBtn:hover {
   cursor: pointer;
-  color: grey;
+  color: #f1f1f1;
 }
 
 .visibleContainer {
@@ -145,6 +174,26 @@ img {
   padding-top: 0;
 }
 
+
+.reply {
+  padding-top: 8px;
+  text-align: center;
+  align-content: center;
+  align-self: flex-end;
+  background: dimgrey;
+  color: #f1f1f1;
+  min-height: 4vh;
+  min-width: 13vw;
+  font-size: 2vh;
+  border-radius: 25px;
+  transition: color .3s ease;
+}
+
+.reply:hover {
+  color: grey;
+  background: #f1f1f1
+}
+
 @media (min-width: 40em) {
   .grid {
     color: grey;
@@ -155,10 +204,23 @@ img {
     grid-gap: 16px;
   }
 
+  .grid-item-foundMail {
+    padding-top: 1px;
+    border-radius: 20px;
+    background: dimgrey;
+    align-items: center;
+    grid-row-end: 5;
+    grid-row-start: 2;
+    grid-column-start: 2;
+  }
+
+
   .col {
-    background-color: pink;
-    padding: 66px;
-    border-radius: 16px;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    font-size: 3vh;
   }
 
   .navContainer {
@@ -167,7 +229,7 @@ img {
 
   .navBtn {
     display: block;
-    font-size: 3.2vw;
+    font-size: 2.2vw;
     margin: 0.2vw 1vw;
     text-shadow: 2px 2px lightgray;
   }
@@ -184,15 +246,24 @@ img {
   .grid-item-events {
     display: grid;
     background: dimgrey;
-    /* grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 6;
-    grid-row-end: auto; */
     width: 97%;
     margin: 10px auto;
     border-radius: 20px;
   }
 
+
+  .reply {
+      padding-top: 8px;
+      text-align: center;
+      align-content: center;
+      align-self: flex-end;
+      background: dimgrey;
+      color: #f1f1f1;
+      min-height: 4vh;
+      min-width: 10vw;
+      font-size: 2vh;
+      border-radius: 25px;
+  }
 }
 
 
@@ -203,12 +274,21 @@ img {
 
   .col {
     margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    font-size: 3vh;
+  }
+
+  .mail {
+    display: flex;
+    font-size: 3vh;
   }
 
   .bulletinContainer {
     display: grid;
     grid-template-columns: 10px 30% auto 10px;
-    grid-template-rows: 15% 15% 15%;
+    grid-template-rows: 20% 25% 15%;
   }
 
   .grid-item-post {
@@ -219,16 +299,15 @@ img {
 
   .grid-item-BB {
     grid-column-start: 3;
-    /* background: dimgrey; */
+
   }
 
   .grid-item-foundMail {
-    display: flex;
-    flex-direction: column;
     border-radius: 20px;
     background: dimgrey;
+    align-items: center;
     grid-row-end: 5;
-    grid-row-start: 3;
+    grid-row-start: 2;
     grid-column-start: 2;
   }
 
@@ -250,13 +329,32 @@ img {
   }
 
   .grid-clicks {
-    /* display: flex;
-    flex-direction: column; */
     grid-column-start: 2;
     grid-row-start: 1;
   }
 
+  .reply {
+    padding-top: 6px;
+    text-align: center;
+    align-content: center;
+    align-self: flex-end;
+    background: dimgrey;
+    color: #f1f1f1;
+    min-height: 4vh;
+    min-width: 5vw;
+    font-size: 2vh;
+    border-radius: 25px;
+  }
+
 }
+
+
+
+
+
+
+
+
 
 label {
   margin-top: 1em;

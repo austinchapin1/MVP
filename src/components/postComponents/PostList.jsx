@@ -80,9 +80,9 @@ const PostList = () => {
 
 
 
-  let list = (temp) => {
-    console.log(temp)
-    return temp.map((post, idx) => {
+  let list = (posts) => {
+    console.log(posts)
+    return posts.map((post, idx) => {
       return <Post data={post} key={idx}/>
     });
   }
