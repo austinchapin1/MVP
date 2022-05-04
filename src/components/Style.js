@@ -16,23 +16,6 @@ export const NavButton = styled.button`
   background-color: light-blue
 `
 
-export const SubmitButton = styled.button`
-  border: 2px solid #fca311;
-  background: #fca311;
-  color: white;
-  cursor: pointer;
-  border-radius: 18px;
-  border-radius: 33px;
-  font-size: 20px;
-  height: 60px;
-  width: 200px;
-  padding: 0 10px;
-  position: relative;
-  margin-top: 22px;
-  transition: background-color .2s ease-in-out, color .2s ease-in-out;
-`
-
-
 
 export const ModalBackGround = styled.div`
   z-index: auto;

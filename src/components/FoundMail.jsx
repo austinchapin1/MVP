@@ -5,7 +5,6 @@ import { ModalBackGround,
          Container,
          FormInput,
          Select,
-         SubmitButton,
          TextBody } from './Style.js';
 
 
@@ -69,14 +68,16 @@ const FoundMail = () => {
         <option value='dropped at the office.'> Office</option>
       </Select>
       <TextBody placeholder='Leave a note' onChange={e=>setNote(e.target.value)}/>
-      <SubmitButton onClick={handleSubmit}>Post</SubmitButton>
+      <button className='submitBtn' onClick={handleSubmit}>Post</button>
     </Container>
 
 
 
   return (
     <div>
-      <h4>Found Mail?</h4>
+      <div className='title'>
+        <h2>Found Mail?</h2>
+      </div>
       <button onClick={toggleModal}>Found Mail?</button>
 
       <div onClick={toggleModal}>{mailOpen ? <ModalBackGround /> : null}</div>

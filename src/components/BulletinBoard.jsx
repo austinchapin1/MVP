@@ -55,8 +55,9 @@ const BulletinBoard = () => {
   return (
 
     <BBContext.Provider value={{posts, getPosts}}>
-
-        <h2 id='BBHeader'>BULLETIN BOARD</h2>
+        <div className='sectionHeaders'>
+          <h2>BULLETIN BOARD</h2>
+        </div>
         <PostList />
         <AddPost />
         <MailBox />

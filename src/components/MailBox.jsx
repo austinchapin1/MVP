@@ -10,7 +10,9 @@ const MailBox = () => {
 
   return (
     <div>
-      <h3>Mail Box</h3>
+      <div className='title'>
+        <h2>Mail Box</h2>
+      </div>
       <FoundMail />
 
     </div>

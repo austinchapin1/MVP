@@ -9,7 +9,9 @@ const Events = () => {
 
   return (
     <div>
-      <h4>Events</h4>
+      <div className='title'>
+        <h2>Events</h2>
+      </div>
 
 
     </div>

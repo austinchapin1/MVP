@@ -6,8 +6,7 @@ import { ModalBackGround,
          Container,
          FormInput,
          Select,
-         TextBody,
-         SubmitButton } from '../Style.js';
+         TextBody} from '../Style.js';
 
 
 
@@ -56,14 +55,16 @@ const AddPost = () => {
         <option value='Medium'>Medium</option>
         <option value='Low'>Low</option>
       </Select>
-      <SubmitButton onClick={handleSubmit}>Post</SubmitButton>
+      <button className='submitBtn' onClick={handleSubmit}>Post</button>
     </Container>
 
 
 
   return (
-    <div>
-      <h4>Post a message!</h4>
+    <div >
+      <div className='title'>
+        <h2>Post a message!</h2>
+      </div>
       <button onClick={toggleModal}>Post a message!</button>
 
       <div onClick={toggleModal}>{postOpen ? <ModalBackGround /> : null}</div>

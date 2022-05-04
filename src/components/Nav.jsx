@@ -5,17 +5,14 @@ import { NavBox, NavButton } from './Style.js';
 
 const Nav = () => {
 
-
-
   return (
 
-
-    <div>
-      <NavButton>Bulletin Board</NavButton>
-      <NavButton>Mail Box</NavButton>
-      <NavButton>Events</NavButton>
-      <NavButton>Deals</NavButton>
-      <NavButton>Resident Portal</NavButton>
+    <div className='navContainer'>
+      <h3 className='navBtn'>Bulletin Board</h3>
+      <h3 className='navBtn'>Mail Box</h3>
+      <h3 className='navBtn'>Events</h3>
+      <h3 className='navBtn'>Deals</h3>
+      <h3 className='navBtn'>Resident Portal</h3>
     </div>
 
   )

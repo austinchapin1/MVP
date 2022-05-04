@@ -14,8 +14,56 @@ h3 {
   line-height: 1;
 }
 
-#BBheader {
-  margin-left: 10em;
+
+
+body {
+  background: #8e9eab;  /* fallback for old browsers */
+  background: linear-gradient(to top, #8e9eab,  #eef2f3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+
+h1 {
+  font-size: 8vw;
+  font-family: 'Monoton', cursive;
+  text-shadow: 2px 2px lightgray;
+  color: 	#f8f8ff;
+}
+
+
+
+.title h2 {
+  font-size: 2vw;
+  color: grey;
+  font-family: 'Lobster', cursive;
+  text-shadow: 2px 2px white;
+}
+
+
+
+.title {
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+#BBHeader {
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.sectionHeaders {
+  font-size: 3vw;
+  color: grey;
+  font-family: 'Monoton', cursive;
+  text-shadow: 2px 2px white;
+  text-align: center;
+  margin: 3em 0 2em 0;
 }
 
 img {
@@ -42,10 +90,34 @@ img {
 }
 
 .col:hover {
-  max-width: 90%;
+  margin-left: 10px;
+  max-width: calc(90vh);
   transform: scale(1.2)
 }
 
+.navContainer {
+  font-family: 'Monoton', cursive;
+  text-shadow: 2px 2px lightgray;
+  color: 	#f8f8ff;
+  font-size: 2vw;
+  margin: 5em;
+  display: flex;
+  flex-direction: column;
+  justify-content:baseline;
+  gap: 5px;
+  margin: 0 10px;
+  max-width: 80%
+}
+
+.navBtn {
+  font-size: 6vw;
+  transition: color .3s ease;
+}
+
+.navBtn:hover {
+  color: grey;
+  cursor: pointer;
+}
 
 @media (min-width: 40em) {
   .grid {
@@ -57,13 +129,45 @@ img {
     grid-gap: 16px;
   }
 
-
   .col {
     background-color: pink;
     margin-bottom: 16px;
     padding: 16px;
     border-radius: 16px;
   }
+
+  .navContainer {
+    display: flex;
+  }
+
+  .navBtn {
+    display: block;
+    font-size: 3.2vw;
+    /* color: grey; */
+    text-shadow: 2px 2px lightgray;
+  }
+
 }
 
+
+.submitBtn {
+  border: 2px solid #fca311;
+  background: #fca311;
+  color: white;
+  cursor: pointer;
+  border-radius: 18px;
+  border-radius: 33px;
+  font-size: 20px;
+  height: 60px;
+  width: 200px;
+  padding: 0 10px;
+  position: relative;
+  margin-top: 22px;
+  transition: background-color .2s ease-in-out, color .2s ease-in-out;
+}
+
+.submitBtn:hover {
+  background-color: black;
+  color: #fca311
+}
 
