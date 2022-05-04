@@ -89,14 +89,8 @@ const PostList = () => {
 
   return (
 
-      // <PostContainer>
-      //   {list(posts)}
-      // </PostContainer>
-
       <div className='grid'>
-
         {list(temp)}
-
       </div>
   )
 }

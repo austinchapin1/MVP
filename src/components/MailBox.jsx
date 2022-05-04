@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState, useContext, useEffect } from 'react';
 import axios from 'axios';
-import FoundMail from './FoundMail.jsx';
 
 const MailBox = () => {
 
@@ -9,12 +8,10 @@ const MailBox = () => {
 
 
   return (
-    <div>
-      <div className='title'>
+    <div className='grid-item-foundMail'>
+      <div className='sectionHeaders mailHeader'>
         <h2>Mail Box</h2>
       </div>
-      <FoundMail />
-
     </div>
 
   )

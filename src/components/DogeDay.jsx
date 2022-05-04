@@ -8,8 +8,8 @@ const DogeDay = () => {
 
 
   return (
-    <div>
-      <h4>Doge Of The Day</h4>
+    <div className='sectionHeaders'>
+      <h2>Doge Of The Day</h2>
 
 
     </div>

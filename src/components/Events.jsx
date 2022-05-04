@@ -8,8 +8,8 @@ const Events = () => {
 
 
   return (
-    <div>
-      <div className='title'>
+    <div className='grid-item-events'>
+      <div className='sectionHeaders'>
         <h2>Events</h2>
       </div>
 

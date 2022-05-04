@@ -6,6 +6,7 @@ import Events from './Events.jsx';
 import DogeDay from './DogeDay.jsx';
 import AddPost from './postComponents/AddPost.jsx';
 import PostList from './postComponents/PostList.jsx';
+import FoundMail from './FoundMail.jsx';
 
 export const BBContext = React.createContext(null);
 
@@ -55,14 +56,19 @@ const BulletinBoard = () => {
   return (
 
     <BBContext.Provider value={{posts, getPosts}}>
-        <div className='sectionHeaders'>
-          <h2>BULLETIN BOARD</h2>
+        <div className='grid-item-BB' >
+          <div className='sectionHeaders visibleContainer'>
+            <h2>BULLETIN BOARD</h2>
+            <PostList />
+          </div>
         </div>
-        <PostList />
-        <AddPost />
+        <div className='grid-clicks'>
+          <AddPost />
+          <FoundMail />
+        </div>
         <MailBox />
         <Events />
-        <DogeDay />
+        {/* <DogeDay /> */}
 
     </BBContext.Provider>
   )

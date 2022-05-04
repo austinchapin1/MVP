@@ -32,16 +32,27 @@ export const Container = styled.div`
 z-index:1000;
 display: flex;
 flex-direction: column;
+align-items: center;
 position:fixed;
-background: antiquewhite;
-min-width: 400px;
-min-height: 500px;
+background: #f1f1f1;
+min-width: 80vw;
+min-height: 80vw;
 top: 50%;
 left: 50%;
 transform: translate(-50%,-50%);
 border-radius: 10px;
 padding: 0.75rem;
-color: rgba(0,0,139, 0.5);
+color: rgba(0,0,1, 0.5);
+
+@media (min-width: 40em) {
+  min-width: 80vw;
+  min-height: 40vw;
+}
+
+@media (min-width: 80em) {
+  min-width: 40vw;
+  min-height: 40vh;
+}
 `;
 
 export const FormInput = styled.input`
@@ -61,12 +72,12 @@ export const FormInput = styled.input`
 
 export const TextBody = styled.textarea`
   font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin-top: 3px;
+  margin: 30px auto;
   background-color: #f1f1f1;
   border: 1px solid black;
   font-size: 16px;
   line-height: 38px;
-  min-height: 38px;
+  min-height: 20vh;
   padding-left: 12px;
   width: 100%;
   ::placeholder {
@@ -85,6 +96,7 @@ export const Select = styled.select`
   font-size: 14px;
   border: none;
   margin-left: 10px;
+  min-height: 6vh;
 
   option {
     color: grey;

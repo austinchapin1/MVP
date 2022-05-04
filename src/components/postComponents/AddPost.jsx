@@ -62,10 +62,9 @@ const AddPost = () => {
 
   return (
     <div >
-      <div className='title'>
-        <h2>Post a message!</h2>
+      <div onClick={toggleModal} className='sectionHeaders'>
+        <h2 className='modalBtn'>Post a message!</h2>
       </div>
-      <button onClick={toggleModal}>Post a message!</button>
 
       <div onClick={toggleModal}>{postOpen ? <ModalBackGround /> : null}</div>
       <div>{postOpen ? cont : null}</div>
