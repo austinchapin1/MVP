@@ -8,13 +8,15 @@ const Nav = () => {
 
 
   return (
-    <NavBox>
+
+
+    <div>
       <NavButton>Bulletin Board</NavButton>
       <NavButton>Mail Box</NavButton>
       <NavButton>Events</NavButton>
       <NavButton>Deals</NavButton>
       <NavButton>Resident Portal</NavButton>
-    </NavBox>
+    </div>
 
   )
 }

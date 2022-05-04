@@ -4,8 +4,11 @@ mongoose.Promise = global.Promise;
 
 const mailSchema = new mongoose.Schema({
   room: Number,
+  firstName: String,
+  lastName: String,
   type: String,
-  pickUp: String
+  pickUp: String,
+  note: String
 },
   {
     timestamps: true

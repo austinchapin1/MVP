@@ -3,12 +3,11 @@ const db = require('./index.js');
 mongoose.Promise = global.Promise;
 
 const userSchema = new mongoose.Schema({
-  firstName: String,
-  lastName: String,
+  type: String,
   room: Number,
-  phone: Number,
-  email: String,
-  mail: [String]
+  text: String,
+  urgency: String,
+  responses: [String]
 },
   {
     timestamps: true

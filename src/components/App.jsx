@@ -4,14 +4,15 @@ import axios from 'axios';
 import BulletinBoard from './BulletinBoard.jsx';
 import Nav from './Nav.jsx';
 import { NavButton } from './Style.js';
+import './styles.css';
 
 const App = () => {
 
-
-
   return (
     <div>
-      <h1>Welcome home!</h1>
+      <div>
+        <h1>Welcome home!</h1>
+      </div>
       <Nav />
       <BulletinBoard />
     </div>
