@@ -89,7 +89,7 @@ img {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   scale: 1;
   transition: all .28s ease;
-  gap: 6vh;
+  /* gap: 6vh; */
   /* display: flex; */
 }
 

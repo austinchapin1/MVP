@@ -86,6 +86,18 @@ app.post('/postReply', (req, res) => {
 })
 
 
+app.delete('/posts/:id', (req, res) => {
+  let id = req.params.id;
+
+  Post.deleteOne({_id: id})
+    .then(result => {
+      console.log('SUCCESS')
+      res.json(result)
+    })
+    .catch(error => {
+      res.json(error)
+    })
+})
 
 
 app.delete('/:id', (req, res) => {

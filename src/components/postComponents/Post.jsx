@@ -6,7 +6,7 @@ import { ModalBackGround, Container, TextBody } from '../Style.js';
 
 const Post = (props) => {
 
-  const { posts, getPosts, postReply } = useContext(BBContext);
+  const { posts, getPosts, postReply, deletePost } = useContext(BBContext);
   const { text, urgency, room, responses, _id } = props.data;
 
   const [ view, setView ] = useState(false);
@@ -53,6 +53,11 @@ const Post = (props) => {
     setReplyView(!replyView)
   }
 
+  const handleDelete = (e) => {
+    e.preventDefault();
+    deletePost(_id);
+  }
+
 
   const cont =
   <Container>
@@ -88,6 +93,7 @@ const Post = (props) => {
 
         <div className='reply' onClick={toggleOpen}>Replies</div>
         <div className='reply' onClick={toggleReplyOpen}> Reply</div>
+        <div className='reply' onClick={handleDelete}>Delete</div>
       </div>
     </div>
   )

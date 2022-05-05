@@ -49,6 +49,16 @@ const BulletinBoard = () => {
       })
   }
 
+  const deletePost = (id) => {
+    axios.delete(`http://localhost:3000/posts/${id}`)
+      .then(result => {
+        getPosts();
+      })
+      .catch(error => {
+        console.log(error)
+      })
+  }
+
 
 
   const postReply = (id, text) => {
@@ -77,7 +87,7 @@ const BulletinBoard = () => {
 
   return (
 
-    <BBContext.Provider value={{posts, getPosts, mail, setMail, deleteMail, postReply}}>
+    <BBContext.Provider value={{posts, getPosts, mail, setMail, deleteMail, postReply, deletePost}}>
         <div className='grid-item-BB' >
           <div className='sectionHeaders visibleContainer'>
             <h2 style={{paddingTop: '40px'}}>BULLETIN BOARD</h2>

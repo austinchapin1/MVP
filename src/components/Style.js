@@ -50,6 +50,7 @@ border-radius: 10px;
 padding: 0.75rem;
 color: rgba(0,0,1, 0.5);
 max-height: 90%;
+overflow:auto;
 
 @media (min-width: 40em) {
   min-width: 80vw;
