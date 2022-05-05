@@ -5,7 +5,7 @@ const PORT = 3000;
 
 const Mail = require('../db/Mail.js');
 const Post = require('../db/Post.js');
-const Reply = require('../db/Reply.js')
+const Reply = require('../db/Reply.js');
 
 app.use(express.json());
 app.use(express.static(__dirname + '/../public'));
@@ -66,8 +66,32 @@ app.post('/mail', (req, res) => {
 })
 
 
-app.post('/postReply'. (req, res) => {
-  console.log(req.body)
+app.post('/postReply', (req, res) => {
+  let { id, text } = req.body;
+  let reply = new Reply({postID: id, room: 355, text: text});
+  reply.save();
+
+  Post.findOne({_id: id})
+    .then(result => {
+      result.responses.unshift(text)
+      console.log(result.responses)
+    })
+
+
+})
+
+
+
+
+app.delete('/:id', (req, res) => {
+  let id = req.params.id;
+  Mail.deleteOne({_id: id})
+    .then(result => {
+      res.json(result)
+    })
+    .catch(error => {
+      res.json(error)
+    })
 })
 
 

@@ -3,7 +3,7 @@ const db = require('./index.js');
 mongoose.Promise = global.Promise;
 
 const userSchema = new mongoose.Schema({
-  postID: Number,
+  postID: String,
   room: Number,
   text: String
 },
@@ -12,6 +12,6 @@ const userSchema = new mongoose.Schema({
   }
 );
 
-const Post = mongoose.model('User', userSchema);
+const Reply = mongoose.model('Reply', userSchema);
 
-module.exports = Post;
+module.exports = Reply;

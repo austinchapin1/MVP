@@ -31,6 +31,7 @@ const BulletinBoard = () => {
   const getPosts = () => {
     axios.get('http://localhost:3000/posts')
       .then(results => {
+        console.log(results.data)
         setPosts(results.data)
       })
       .catch(error => {
@@ -52,7 +53,7 @@ const BulletinBoard = () => {
 
   const postReply = (id, text) => {
     axios.post('http://localhost:3000/postReply', {
-      id: _id,
+      id: id,
       text: text
     })
     .then(results => {

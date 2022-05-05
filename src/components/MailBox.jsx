@@ -53,7 +53,7 @@ const MailBox = () => {
         <h2>Mail Box</h2>
       </div>
         <div className='grid'>
-        {mailList(temp)}
+        {mailList(mail)}
 
         </div>
     </div>

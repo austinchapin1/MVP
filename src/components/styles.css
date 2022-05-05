@@ -90,7 +90,7 @@ img {
   scale: 1;
   transition: all .28s ease;
   gap: 6vh;
-  display: flex;
+  /* display: flex; */
 }
 
 .col:hover {

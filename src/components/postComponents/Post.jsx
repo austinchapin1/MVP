@@ -50,6 +50,7 @@ const Post = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     postReply(_id, textBody)
+    setReplyView(!replyView)
   }
 
 
