@@ -323,7 +323,7 @@ img {
     background: dimgrey;
     grid-column-start: 1;
     grid-column-end: 4;
-    grid-row-start: 6;
+    grid-row-start: 5;
     grid-row-end: auto;
     width: 97%;
     margin: 10px auto;

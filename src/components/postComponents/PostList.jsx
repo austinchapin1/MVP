@@ -88,7 +88,7 @@ const PostList = () => {
 
   return (
     <div className='grid'>
-        {console.log(posts)}
+        {/* {console.log(posts)} */}
         {list(posts)}
       </div>
   )

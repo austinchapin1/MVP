@@ -74,7 +74,12 @@ app.post('/postReply', (req, res) => {
   Post.findOne({_id: id})
     .then(result => {
       result.responses.unshift(text)
-      console.log(result.responses)
+      result.save();
+      // console.log(result)
+      res.json(result)
+    })
+    .catch(error => {
+      res.json(error)
     })
 
 

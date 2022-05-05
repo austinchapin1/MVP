@@ -74,6 +74,7 @@ const Post = (props) => {
 
   return (
     <div>
+      {console.log(responses)}
       <div onClick={toggleOpen}>{view ? <ModalBackGround /> : null}</div>
       <div>{view ? cont : null}</div>
 
